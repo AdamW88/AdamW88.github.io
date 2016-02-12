@@ -40,6 +40,7 @@ There's an entrepreneurial energy here that is definitely absent from Houston. I
 to fruition.
 
 That's not to say the Bay Area isn't without its faults. Here are a few things that I've noticed:
+
 1. Rent is outrageous. Seriously, a piece of shit in San Francisco is at least $2300. You wonder why everywhere here makes >$100,000? Its because of the cost of living.
 2. Having a car if you're in the city or Oakland is an expensive pain, and parking is a nightmare. If you're lucky enough to have a complex that comes with a parking spot, you'll pay between $100-300/mo for it, or you're gonna have to find street parking. Speaking of parking...
 3. The San Francisco Municipal Transportation Agency is evil. Deciphering the plethora of signage in some areas of the city is unnecessarily complicated. Coming from a city that never had street sweeping, it is a huge pain. Where I am in Oakland, the streets are offset so that streets in one direction only allow parking Mon/Weds/Fri and the perpendicular streets are Tues/Thurs with street sweeping between the hours of 3-5am. What this means is if you don't have a parking spot, you need to move your car every single day to a different spot, or be ticket $66.
