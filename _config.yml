@@ -1,17 +1,17 @@
-title:            My Site
-description:      Another tech website
+title:            adam.io
+description:      A blog about my hardware design, Python, tech, and more.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url:
+url:	www.adamw88.github.io
 
 # Owner/author information
 owner:
   name:           Adam W
   avatar:         avatar.jpg
-  bio:            "Electrical engineer by day, and asleep by night"
+  bio:            "I love electronics design, coding, traveling, and good beer/coffee"
   email:          adamwheeler88@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
@@ -29,7 +29,7 @@ owner:
 background: 
 
 # Analytics and webmaster tools stuff goes here
-google_analytics:   
+google_analytics:   UA-73774112-1
 google_verify:      
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
 bing_verify:         
