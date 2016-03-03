@@ -3,7 +3,7 @@ layout: post
 title: hello world
 description: "My first attempt at making a blog over coding, technology, and electronics."
 modified: 2016-02-11
-tags: [personal, blog]
+tags: [blog]
 image:
   feature: rsz_golden-gate-bridge.jpg
   credit: Museum of the City

@@ -7,14 +7,15 @@ url:
 
 # Owner/author information
 owner:
-  name:           Adam W
+  name:           Adam Wheeler
   avatar:         avatar.jpg
   bio:            "I love electronics design, coding, traveling, and good beer/coffee"
   email:          adamwheeler88@gmail.com
   # Social networking links used in footer. Update and remove as you like.
   twitter:        
   facebook:       
-  github:         
+  github:         adamw88
+  youtube:		adamsgopro
   stackexchange:  
   linkedin:       
   instagram:      
@@ -24,7 +25,7 @@ owner:
   google_plus:
 
 # Background image to be tiled on all pages
-background: 
+background: witewall_3.png
 
 # Analytics and webmaster tools stuff goes here
 google_analytics:   UA-73774112-1
