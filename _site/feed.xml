@@ -4,7 +4,7 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2016-03-10T21:10:49-08:00</updated>
+<updated>2016-03-10T23:12:00-08:00</updated>
 <id>/</id>
 <author>
   <name>Adam Wheeler</name>
@@ -26,7 +26,7 @@
     <email>adamwheeler88@gmail.com</email>
   </author>
   <content type="html">
-    &lt;p&gt;htmlPy is a really great tool to make an awesome web or stand alone application. &lt;a href=&quot;http://htmlpy.readthedocs.org/en/master/index.html#&quot;&gt;htmlPy&lt;/a&gt; is a wrapper around the famous PySide QtWebKit module, which enables you to make full blown GUIs using HTML/JSS/CSS and Python. When I first came across htmlPy, the documentation wasn’t very clear to me so I had to stumble around a little bit to get things figured out, and thought it would be nice if I wrote a tutorial showing everyone how to get it up and running.&lt;/p&gt;
+    &lt;p&gt;htmlPy is a really great tool to make an awesome web or stand alone application. &lt;a href=&quot;http://htmlpy.readthedocs.org/en/master/index.html#&quot;&gt;htmlPy&lt;/a&gt; is a wrapper around the famous PySide QtWebKit module, which enables you to make full blown GUIs using HTML/JSS/CSS and Python. When I first came across htmlPy, the documentation wasn’t very clear to me so I had to stumble around a little bit to get things figured out, and thought it would be nice if I wrote a tutorial showing everyone how to get it up and running. The ultimate goal of this tutorial is to build a nice GUI with Python backend bindings to interface with our Raspberry Pi!&lt;/p&gt;
 
 &lt;p&gt;A few things I love about htmlPy are:&lt;/p&gt;
 
@@ -102,7 +102,7 @@
 &lt;p&gt;And you’ll see…&lt;/p&gt;
 
 &lt;figure&gt;
-	&lt;a href=&quot;http://adamw88.github.io/images/htmlPyAssets/htmlPy_hello_world.jpg&quot;&gt;&lt;img src=&quot;/images/htmlPyAssets/htmlPy_hello_world.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://adamw88.github.io/images/htmlPyAssets/htmlPy_hello_world.png&quot;&gt;&lt;img src=&quot;/images/htmlPyAssets/htmlPy_hello_world.png&quot; /&gt;&lt;/a&gt;
 &lt;/figure&gt;
 
 &lt;p&gt;That’s pretty cool right? You’ve successfully created your very first stand-alone Python app using nothing more than a couple of lines of code. Let’s add a button to our demo app.&lt;/p&gt;
@@ -118,7 +118,14 @@
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/body&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;nt&quot;&gt;&amp;lt;/html&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;By now you should see that whatever HTML you place in &lt;code class=&quot;highlighter-rouge&quot;&gt;Index.html&lt;/code&gt; will be placed in your app. In the next part of this tutorial, I’ll show you how we can&lt;/p&gt;
+&lt;figure&gt;
+	&lt;a href=&quot;http://adamw88.github.io/images/htmlPyAssets/htmlPy_hello_world_button.png&quot;&gt;&lt;img src=&quot;/images/htmlPyAssets/htmlPy_hello_world_button.png&quot; /&gt;&lt;/a&gt;
+&lt;/figure&gt;
+
+&lt;p&gt;By now you should see that whatever HTML you place in &lt;code class=&quot;highlighter-rouge&quot;&gt;Index.html&lt;/code&gt; will be placed in your app. In the next part of this tutorial, I’ll show you how we can install Bootstrap and add Python backend bindings to do things!&lt;/p&gt;
+
+&lt;p&gt;Till next time.
+-Adam&lt;/p&gt;
 
     &lt;p&gt;&lt;a href=&quot;/htmlPy/&quot;&gt;Using htmlPy to Make Front End GUIs with Python Bindings Pt. 1&lt;/a&gt; was originally published by Adam Wheeler at &lt;a href=&quot;&quot;&gt;adam wheeler&lt;/a&gt; on March 10, 2016.&lt;/p&gt;
   </content>
