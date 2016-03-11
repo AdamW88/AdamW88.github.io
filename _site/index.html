@@ -131,6 +131,112 @@
   <header>
     
       <div class="entry-image-index">
+        <a href="/htmlPy/" title="Frontend GUIs with Python Integration"><img src="/images//htmlPyAssets/python-programming.jpg" alt="Frontend GUIs with Python Integration"></a>
+      </div><!-- /.entry-image -->
+    
+    <div class="entry-meta">
+      <span class="entry-date date published updated"><time datetime="2016-03-10T00:00:00-08:00"><a href="/htmlPy/">March 10, 2016</a></time></span><span class="author vcard"><span class="fn"><a href="/about/" title="About Adam Wheeler">Adam Wheeler</a></span></span>
+      
+      <span class="entry-reading-time">
+        <i class="fa fa-clock-o"></i>
+        
+Reading time ~2 minutes
+      </span><!-- /.entry-reading-time -->
+      
+    </div><!-- /.entry-meta -->
+    
+      <h1 class="entry-title"><a href="/htmlPy/" rel="bookmark" title="Frontend GUIs with Python Integration" itemprop="url">Frontend GUIs with Python Integration</a></h1>
+    
+  </header>
+  <div class="entry-content">
+    <p>htmlPy is a really great tool to make an awesome web or stand alone application. <a href="http://htmlpy.readthedocs.org/en/master/index.html#">htmlPy</a> is a wrapper around the famous PySide QtWebKit module, which enables you to make full blown GUIs using HTML/JSS/CSS and Python. When I first came across htmlPy, the documentation wasn’t very clear to me so I had to stumble around a little bit to get things figured out, and thought it would be nice if I wrote a tutorial showing everyone how to get it up and running.</p>
+
+<p>A few things I love about htmlPy are:</p>
+
+<ul>
+  <li>
+    <p>It can be used with any Python module or webframe work like <a href="http://conda.pydata.org/docs/index.html">Conda,</a> <a href="https://www.djangoproject.com/">Django</a>, and <a href="http://flask.pocoo.org/">Flask</a>.</p>
+  </li>
+  <li>It supports front end frameworks like Bootstrap and jQuery, so rapid prototyping is a breeze</li>
+  <li>HTML/JSS/CSS are easy, intuitive languages to make a great GUI in no time</li>
+  <li>It supports both Python 2 and 3</li>
+  <li>Since it is built on the Qt framework, your app is completely functional across all platforms</li>
+</ul>
+
+<p>In this post, I’m going to show you how to get htmlPy up and running on your machine and build a stand alone app using a single HTML and Python file. In another post, we’ll get Bootsrap up and running so that you can start making your apps look even better.</p>
+
+<h2>htmlPy Installation</h2>
+
+<p>You’ll need the following dependencies to get htmlPy up and running:</p>
+
+<ul>
+  <li>Python 2 or 3 (I’ll be using 2.7.11)</li>
+  <li>pip for Windows / Homebrew &amp; pip for Mac OS X (if you don’t already have these on your machine, you should)</li>
+  <li>PySide</li>
+</ul>
+
+<p><b><u>On Mac OS X:</u></b><br /></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">brew</span> <span class="n">install</span> <span class="n">qt</span></code></pre></figure>
+
+<p>after that, install PySide:<br /></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">pip</span> <span class="n">install</span> <span class="n">PySide</span></code></pre></figure>
+
+<p>and lastly, install htmlPy (you may need to sudo this):<br /></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">pip</span> <span class="n">install</span> <span class="n">htmlPy</span></code></pre></figure>
+
+<p><b><u>On Windows:</u></b><br /></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="n">pip</span> <span class="n">install</span> <span class="n">PySide</span></code></pre></figure>
+
+<p>Now that we have all of the dependencies installed, we can dive into making our first application.</p>
+
+<p>Make a new folder where you want your project to be; I named mine ‘site’. htmlPy looks for an <code class="highlighter-rouge">index.html</code> file to be in same directory as the Python script you will execute to run your app. Go ahead and make your <code class="highlighter-rouge">index.html</code> file and place:</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>Hello, World<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>I'm using htmlPy! Pretty neat stuff!<span class="nt">&lt;/p&gt;</span></code></pre></figure>
+
+<p>There are two types of applications that htmlPy can make: a standalone application, which we’ll be making here, and a web based application.</p>
+
+<p>To make a standalone application, create a new Python file name <code class="highlighter-rouge">main.py</code> and place it in the same directory as <code class="highlighter-rouge">index.html</code>.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python">    <span class="kn">import</span> <span class="nn">htmlPy</span>
+    <span class="kn">import</span> <span class="nn">os</span>
+    
+    <span class="n">app</span> <span class="o">=</span> <span class="n">htmlPy</span><span class="o">.</span><span class="n">AppGUI</span><span class="p">(</span><span class="n">title</span><span class="o">=</span><span class="s">u"htmlPy Quickstart"</span><span class="p">,</span> <span class="n">maximized</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    
+    <span class="n">app</span><span class="o">.</span><span class="n">template_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">static_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="s">"."</span><span class="p">)</span>
+    
+    <span class="n">app</span><span class="o">.</span><span class="n">template</span> <span class="o">=</span> <span class="p">(</span><span class="s">"index.html"</span><span class="p">,</span> <span class="p">{</span><span class="s">"username"</span><span class="p">:</span> <span class="s">"htmlPy_user"</span><span class="p">})</span>
+    
+    <span class="n">app</span><span class="o">.</span><span class="n">start</span><span class="p">()</span></code></pre></figure>
+
+<p>This code instantiates a new application called ‘app’, uses Jinja2 to render ‘<code class="highlighter-rouge">index.html</code>’, and starts the app. If you don’t have Jinja2 installed, just type (you guessed it):</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="err">$</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jinja2</span></code></pre></figure>
+
+<p>Now open your terminal and navigate to the directory where you have your project saving to and run <code class="highlighter-rouge">main.py</code></p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">python</span> <span class="n">main</span><span class="o">.</span><span class="n">py</span></code></pre></figure>
+
+<p>And you’ll see…</p>
+
+<figure>
+	<a href="http://adamw88.github.io/images/htmlPyAssets/htmlPy_Hello_World.png"><img src="/images/htmlPyAssets/htmlPy_Hello_World.png" /></a>
+</figure>
+
+<p>That’s pretty cool right? You’ve successfully created your very first stand-alone Python app using nothing more than a couple of lines of code.</p>
+
+  </div><!-- /.entry-content -->
+</article><!-- /.hentry -->
+
+<article class="hentry">
+  <header>
+    
+      <div class="entry-image-index">
         <a href="/Yosemite/" title="Texans Take Yosemite"><img src="/images//Yosemite/SAM_2593.jpg" alt="Texans Take Yosemite"></a>
       </div><!-- /.entry-image -->
     
