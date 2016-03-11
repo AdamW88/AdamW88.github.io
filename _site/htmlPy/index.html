@@ -5,7 +5,7 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Frontend GUIs with Python Integration &#8211; adam wheeler</title>
+<title>Using htmlPy to Make Front End GUIs with Python Bindings Pt. 1 &#8211; adam wheeler</title>
 <meta name="description" content="Introduction to htmlPy">
 <meta name="keywords" content="blog, python">
 
@@ -14,7 +14,7 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Frontend GUIs with Python Integration">
+<meta property="og:title" content="Using htmlPy to Make Front End GUIs with Python Bindings Pt. 1">
 <meta property="og:description" content="Introduction to htmlPy">
 <meta property="og:url" content="/htmlPy/">
 <meta property="og:site_name" content="adam wheeler">
@@ -115,7 +115,7 @@
 <div class="entry-header">
   
   <div class="entry-image">
-    <img src="/images//htmlPyAssets/python-programming.jpg" alt="Frontend GUIs with Python Integration">
+    <img src="/images//htmlPyAssets/python-programming.jpg" alt="Using htmlPy to Make Front End GUIs with Python Bindings Pt. 1">
   </div><!-- /.entry-image -->
 </div><!-- /.entry-header -->
 
@@ -125,7 +125,7 @@
     <header class="header-title">
       <div class="header-title-wrap">
         
-          <h1 class="entry-title"><a href="/htmlPy/" rel="bookmark" title="Frontend GUIs with Python Integration">Frontend GUIs with Python Integration</a></h1>
+          <h1 class="entry-title"><a href="/htmlPy/" rel="bookmark" title="Using htmlPy to Make Front End GUIs with Python Bindings Pt. 1">Using htmlPy to Make Front End GUIs with Python Bindings Pt. 1</a></h1>
         
         <h2><span class="entry-date date published"><time datetime="2016-03-10T00:00:00-08:00">March 10, 2016</time></span></h2>
         
@@ -214,10 +214,23 @@ Reading time ~2 minutes
 <p>And you’ll see…</p>
 
 <figure>
-	<a href="http://adamw88.github.io/images/htmlPyAssets/htmlPy_Hello_World.png"><img src="/images/htmlPyAssets/htmlPy_Hello_World.png" /></a>
+	<a href="http://adamw88.github.io/images/htmlPyAssets/htmlPy_hello_world.jpg"><img src="/images/htmlPyAssets/htmlPy_hello_world.jpg" /></a>
 </figure>
 
-<p>That’s pretty cool right? You’ve successfully created your very first stand-alone Python app using nothing more than a couple of lines of code.</p>
+<p>That’s pretty cool right? You’ve successfully created your very first stand-alone Python app using nothing more than a couple of lines of code. Let’s add a button to our demo app.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="nt">&lt;html&gt;</span>
+<span class="nt">&lt;body&gt;</span>
+<span class="nt">&lt;h1&gt;</span>Hello, World!<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;p&gt;</span>I'm using htmlPy! Pretty neat stuff!
+<span class="nt">&lt;br&gt;</span>
+<span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">onclick=</span><span class="s">"alert('Hello world!')"</span><span class="nt">&gt;</span>Click Me!<span class="nt">&lt;/button&gt;</span>
+<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/body&gt;</span>
+<span class="nt">&lt;/html&gt;</span></code></pre></figure>
+
+<p>By now you should see that whatever HTML you place in <code class="highlighter-rouge">Index.html</code> will be placed in your app. In the next part of this tutorial, I’ll show you how we can</p>
 
       <footer class="entry-meta">
         <span class="entry-tags"><a href="/tags/#blog" title="Pages tagged blog" class="tag"><span class="term">blog</span></a><a href="/tags/#python" title="Pages tagged python" class="tag"><span class="term">python</span></a></span>
