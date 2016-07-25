@@ -46,7 +46,7 @@ Achieving the 3.3V output from the LM2831 is as easy as following the datasheet 
 
 Let's decide on the component values we need for the LDO. We need to determine values for the inductor, feedback resistors, diode, and input/output capacitors.
 
-###Inductor Selection
+### Inductor Selection
 We need an inductor that will handle the DC current as well as the inductor ripple current.
 
 <figure>
