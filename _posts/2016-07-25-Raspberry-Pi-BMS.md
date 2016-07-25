@@ -35,24 +35,16 @@ I did a little research and found the perfect chip for this project; the Texas I
 
 The high switching speeds on the boost converter means I could use a smaller inductor (more on this later), which is handy on projects that have very limited real estate such as this. The I2C interface allows for changing the power systems characteristics, TI's PowerPath is perfect for making small UPSs, and battery protection/monitoring is critical for safety (fire is a no-no).
 
-The BQ25895 combined with a 5V -> 3V Buck converter is sufficient to meet all of our power requirements for this little project. For the LDO, I chose to use the LM2831 to provide the 3.3V output and supply up to 1.5A.
+The BQ25895 combined with a 5V -> 3V Buck converter is sufficient to meet all of our power requirements for this little project. For this conversion, I chose to use the TI LM2831 to provide the 3.3V output and supply up to 1.5A.
 
 <figure>
 	<a href="http://adamw88.github.io/images/RaspberryPi/BQ25895.JPG"><img src="/images/RaspberryPi/BQ25895.JPG"></a>
 </figure>
 
-Achieving the 3.3V output from the LM2831 is as easy as following the datasheet Texas Instruments supplies.
-
-
-Let's decide on the component values we need for the LDO. We need to determine values for the inductor, feedback resistors, diode, and input/output capacitors.
-
-### Inductor Selection
-We need an inductor that will handle the DC current as well as the inductor ripple current.
+Achieving the 3.3V output from the LM2831 is as easy as following the datasheet Texas Instruments supplies. I have provided my equations used to calculate the values for the input/output capacitors, inductor, diode and feedback resistors onto the schematic below.
 
 <figure>
 	<a href="http://adamw88.github.io/images/RaspberryPi/LM2831.JPG"><img src="/images/RaspberryPi/LM2831.JPG"></a>
 </figure>
 
-With these two small chips, I can fulfill all of the power requirements my customer asked for in a cost effective, low part count solution.
-
-$$D = \mathbf{D}\_{Vout} = $$
+With these two small chips, I can fulfill all of the power requirements my customer asked for in a cost effective, low part count solution. In the next post, I'll explain some of the features this PMIC has, and how they're useful.
