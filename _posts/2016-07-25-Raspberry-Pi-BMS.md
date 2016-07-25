@@ -19,6 +19,8 @@ The requirements for the battery management system (henceforth 'BMS') were:
 -	output 2.5-3A and supply 5V/3V3 to the system load (sensors, 7" LCD touchscreen etc.)
 -	fit on a 30mm X 80mm dual layer PCB
 -	ability to terminate power to the Raspberry Pi if needed
+-	ability to determine approximate charge level
+-	determine if powered from battery or wall-wart
 -	12V, 3.5A DC input
 
 I did a little research and found the perfect chip for this project; the Texas Instruments BQ25895. This is a great little PMIC (power management integrated circuit) that is jam packed full of features that solve nearly all of the power requirements in a single package solution. The main features that caught my attention were:
@@ -33,18 +35,24 @@ I did a little research and found the perfect chip for this project; the Texas I
 
 The high switching speeds on the boost converter means I could use a smaller inductor (more on this later), which is handy on projects that have very limited real estate such as this. The I2C interface allows for changing the power systems characteristics, TI's PowerPath is perfect for making small UPSs, and battery protection/monitoring is critical for safety (fire is a no-no).
 
-The BQ25895 combined with a 5V -> 3V LDO is sufficient to meet all of our power requirements for this little project. For the LDO, I chose to use the LM2381 to provide the 3.3V output and supply up to 1.5A.
-
-Following the datasheet for the BQ25895, the main chunk of the power supply is shown below.
+The BQ25895 combined with a 5V -> 3V Buck converter is sufficient to meet all of our power requirements for this little project. For the LDO, I chose to use the LM2831 to provide the 3.3V output and supply up to 1.5A.
 
 <figure>
 	<a href="http://adamw88.github.io/images/RaspberryPi/BQ25895.JPG"><img src="/images/RaspberryPi/BQ25895.JPG"></a>
 </figure>
 
-Achieving the 3.3V output from the LM2381 is as easy as following the datasheet Linear Tech. supplies.
+Achieving the 3.3V output from the LM2831 is as easy as following the datasheet Texas Instruments supplies.
+
+
+Let's decide on the component values we need for the LDO. We need to determine values for the inductor, feedback resistors, diode, and input/output capacitors.
+
+###Inductor Selection
+We need an inductor that will handle the DC current as well as the inductor ripple current.
 
 <figure>
-	<a href="http://adamw88.github.io/images/RaspberryPi/LM2381.JPG"><img src="/images/RaspberryPi/LM2381.JPG"></a>
+	<a href="http://adamw88.github.io/images/RaspberryPi/LM2831.JPG"><img src="/images/RaspberryPi/LM2831.JPG"></a>
 </figure>
 
 With these two small chips, I can fulfill all of the power requirements my customer asked for in a cost effective, low part count solution.
+
+$$D = \mathbf{D}\_{Vout} = $$
