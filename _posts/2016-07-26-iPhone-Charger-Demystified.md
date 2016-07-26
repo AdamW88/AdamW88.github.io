@@ -5,14 +5,14 @@ description: "A breakdown of the iPhone's AC adapter, and the technology that go
 modified: 2016-07-23
 tags: [blog, hardware]
 image:
-  feature: /RaspberryPi/layout.png
+  feature: /PowerElectronics/iPhoneCharger.jpg
   credit: 
   creditlink:
 ---
 
 One thing I've noticed as I gain experience in my professional career is the great lengths  some companies go to hide technology from the user. This may seem to not make much sense, as you could easily say 'but Adam, people see technology advance before them all the time. The jump from standard definition to HD, from HDDs to SSDs, the ever improving quality of my Snapchat selfies due to better cameras'. Well, yes...and no.
 
-I'm going to talk about a piece of hardware that I've come to have an extreme amount of respect, admiration, and appreciation for: the iPhone charger.
+I'm going to talk about a piece of hardware that I have an appreciation as a design engineer for: the iPhone charger.
 
 Yes, that's right, the tiny little brick that everyone has plugged into their wall socket next to their night stand or at their desk at work. The amount of power electronics and safety design that went into your iPhone brick is truly astounding. The remainder of this article is going to explain the electrical portions of the charger.
 
@@ -35,6 +35,14 @@ The schematic for the flyback stage is here:
 
 You can see the input choke, followed by the diode bridge rectifer, and two RC snubbers to reduce EMI from the DBR. The controller in this charger is the <a href ="http://www.st.com/content/ccc/resource/technical/document/datasheet/b9/c5/7a/59/60/8e/42/14/CD00002330.pdf/files/CD00002330.pdf/jcr:content/translations/en.CD00002330.pdf">STMicroelectronics L6565</a>.
 
-Apple has separated the high voltage and low voltage of the power stage onto two boards within the iPhone charger, and even added some opto-couplers to provide isolation of the feedback signals. These boards are interfaced together with a small ribbon cable carrying feedback signals such as primary current sense, output voltage, and DC input into the controller IC.
+The two small 4.3 Ohm current sense resistors measure the primary winding's current, while the second winding on the primary side (aka auxiliary winding) measures the transformer demagnetization and provides the DC (with the help of a diode and capacitor) to power the controller IC.
 
-The guys over at <a href="http://www.righto.com/2012/05/apple-iphone-charger-teardown-quality.html">righto.com</a> have done a really in depth break-down of the charger, which I definitely recommend checking out if you're super curious about the electrical details of the charger.
+You may be wondering how the controller IC first starts if the converter cannot begin to work until the switching FET is toggled! This is where resistors R2 and R32 come into play. These are start-up resistors, and provide the VCC needed to start the IC before the auxiliary winding can begin to provide power to the pin. 
+
+Apple has separated the high voltage and low voltage of the power stage onto two boards within the iPhone charger, and even added some opto-couplers to provide isolation of the feedback signals. These boards are interfaced together with a small ribbon cable carrying feedback signals such as primary current sense, output voltage, and DC input into the controller IC. That part of the circuit is shown here:
+
+<figure>
+	<a href="http://adamw88.github.io/images/PowerElectronics/Flyback_Schematic2.jpg"><img src="/images/PowerElectronics/Flyback_Schematic2.jpg"></a>
+</figure>
+
+The guys over at <a href="http://www.righto.com/2012/05/apple-iphone-charger-teardown-quality.html">righto.com</a> have done a really great in depth break-down of the charger, which I definitely recommend checking out if you're super curious about the electrical details of the charger.
