@@ -45,4 +45,12 @@ Apple has separated the high voltage and low voltage of the power stage onto two
 	<a href="http://adamw88.github.io/images/PowerElectronics/Flyback_Schematic2.jpg"><img src="/images/PowerElectronics/Flyback_Schematic2.jpg"></a>
 </figure>
 
+You know how when you plug in a non-Apple USB cable, you tend to get the message telling you that this device is not an authentic Apple device and may not work properly? Your phone can tell quite a bit of information based on the resistors placed on the USB D+/D- lines. This is based off of the USB Battery Charging standard, which I'll get into later. Essentially, the voltage on these pins can tell a device what current to expect (i.e. 5A fast charge, standard USB 1A), whether the device plugged in is a standard or non-standard charging device, and more. Several manufacturers have taken to providing their own resistor values to their chargers to optimize their performance.
+
+I'll get into the USB BC1.2 standard in a separate post of its own.
+
+Cheap knock off chargers that you can buy from gas stations, BestBuy, Amazon etc. do not follow the same design guidelines and practices as Apple does. I'm actually very interested in running an experiment where I fully charge my phone from 0% to 100% using an authorized Apple charger and a knock off and comparing the time it takes to charge and the temperature of the charger housing itself to see the difference the extra care in electronics design makes.
+
+I hope you can come away from this post knowing at least a little bit more about that magical little 1"cubed brick we all use, and have a little bit more appreciation of it like I did when I first learned what all is inside.
+
 The guys over at <a href="http://www.righto.com/2012/05/apple-iphone-charger-teardown-quality.html">righto.com</a> have done a really great in depth break-down of the charger, which I definitely recommend checking out if you're super curious about the electrical details of the charger.
