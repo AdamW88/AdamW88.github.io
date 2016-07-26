@@ -1,5 +1,5 @@
 title:            adam wheeler
-description:      A blog about my hardware design, Python, tech, and more.
+description:      A blog about hardware engineering and design, Python, tech, and more.
 disqus_shortname: 
 reading_time:     true
 words_per_minute: 200
@@ -17,8 +17,8 @@ owner:
   github:         adamw88
   youtube:		adamsgopro
   stackexchange:  
-  linkedin:       
-  instagram:      
+  linkedin:       https://www.linkedin.com/in/adamwheeler88
+  instagram:      https://www.instagram.com/adamw88/
   flickr:         
   tumblr:         
   # google plus id, include the '+', eg +mmistakes
@@ -42,6 +42,7 @@ gems:
   - jekyll-sitemap
   - jekyll-paginate
   - jekyll-gist
+  - jekyll-seo-tag
 sass:
   sass_dir: _sass
   style: compressed
@@ -50,7 +51,7 @@ sass:
 permalink:   /:categories/:title/
 
 # Amount of post to show on home page
-paginate: 2
+paginate: 5
 
 kramdown:
   auto_ids: true
