@@ -2,7 +2,7 @@
 layout: post
 title: iPhone Charger Demystified
 description: "A breakdown of the iPhone's AC adapter, and the technology that goes within"
-modified: 2016-07-23
+modified: 2016-07-25
 tags: [blog, hardware]
 image:
   feature: /PowerElectronics/iPhoneCharger.jpg
