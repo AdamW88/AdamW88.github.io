@@ -44,7 +44,7 @@ We can now just add a buffer op-amp with unity gain (gain equal to one which mea
 I didn't include any clamping diodes to protect the ADC as both the op-amp and ADC are both being powered with 5V. The op-amp will never output any voltage over 5V, which is within my ADC input limits. It is important to always consider the worst case scenarios when designing your circuitry. If I were truly sampling larger voltages, I would add a resistor divider network before my signal conditioning circuitry as well as add the Zener clamping diode and RC anti-aliasing filter to protect my ADC's input. These extra passive components will definitely be less expensive than replacing an entire ADC chip, and doing so is overall good design practice.
 
 <figure>
-	<a href="http://adamw88.github.io/images/RaspberryPi/MCP3221_with_clamp.jpg"><img src="/images/RaspberryPi/MCP3221_with_clamp.jpg"></a>
+	<a href="http://adamw88.github.io/images/RaspberryPi/MCP3221_with_clamp.JPG"><img src="/images/RaspberryPi/MCP3221_with_clamp.JPG"></a>
 </figure>
 
 We use a buffer due to its near infinite input impedance, and extremely low output impedance. This helps us accurately measure the voltage on the line without distorting any of the input to the ADC. The anti-aliasing filter only helps to smooth the output of our op-amp before having it sampled at the input pin.
