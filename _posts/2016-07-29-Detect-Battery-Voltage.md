@@ -30,13 +30,13 @@ All of these above characteristics made this the perfect fit for my application.
 Now that we have the analog to digital converter picked out, all we really need to do is feed the sampled voltage to the chip. The data sheet states that the maximum input voltage for this chip is VDD+0.3, while VDD<u><</u>5.5V. The battery voltage will never go over 4.2V due to the control scheme of the PMIC on board (and if it does we have bigger problems than worrying about displaying the battery percentage!). Don't forget to add some decoupling capacitors near the VDD pins to ensure smooth power to the chip.
 
 <figure>
-	<a href="http://adamw88.github.io/images/RaspberryPi/MCP3221.jpg"><img src="/images/RaspberryPi/MCP3221.jpg"></a>
+	<a href="http://adamw88.github.io/images/RaspberryPi/MCP3221.JPG"><img src="/images/RaspberryPi/MCP3221.JPG"></a>
 </figure>
 
 We can now just add a buffer op-amp with unity gain (gain equal to one which means Vout = Vin) and we're finished!
 
 <figure>
-	<a href="http://adamw88.github.io/images/RaspberryPi/MCP3221_with_opamp.jpg"><img src="/images/RaspberryPi/MCP3221_with_opamp.jpg"></a>
+	<a href="http://adamw88.github.io/images/RaspberryPi/MCP3221_with_opamp.JPG"><img src="/images/RaspberryPi/MCP3221_with_opamp.JPG"></a>
 </figure>
 
 ### signal conditioning and ADC protection
